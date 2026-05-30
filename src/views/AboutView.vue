@@ -1,0 +1,340 @@
+<template>
+  <section id="about" class="about-section">
+    <div class="about-hero">
+      <span class="about-tag">Hakkımda</span>
+
+      <p class="about-subtitle">
+        Yazılım geliştirme, web teknolojileri ve sistem programlama alanlarında
+        kendini geliştiren bir yazılım öğrencisi.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="about-heading">
+            Yazılım geliştirmeye tutkuyla bağlı, sürekli öğrenen ve üreten bir geliştiriciyim.
+          </h2>
+
+          <p class="about-description">
+            Merhaba, ben <strong>Berat Arif Gönül</strong>. Yazılım dünyasına küçük yaşlarda
+            adım attım ve zamanla bu ilgimi bir tutkuya dönüştürdüm. Özellikle web geliştirme,
+            sistem programlama ve siber güvenlik alanlarında kendimi geliştirmeye devam ediyorum.
+          </p>
+
+          <p class="about-description">
+            PHP, JavaScript, C ve C++ teknolojileriyle projeler geliştiriyor; modern ve kullanıcı
+            dostu web uygulamaları oluşturmaktan keyif alıyorum. Boş zamanlarımda yeni teknolojileri
+            araştırıyor, farklı projeler üzerinde çalışıyor ve yazılım becerilerimi bir üst seviyeye
+            taşımaya odaklanıyorum.
+          </p>
+
+          <p class="about-description">
+            Hedefim; güçlü, güvenli ve ölçeklenebilir yazılımlar geliştirerek sektörde kendime sağlam
+            bir yer edinmek ve gelecekte büyük projelerde görev alabilmek.
+          </p>
+        </div>
+
+        <div class="about-profile">
+          <div class="profile-frame">
+            <img src="../assets/IMG_20260529_202913_288.webp" alt="Profil fotoğrafı" />
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <h3>Web Geliştirme</h3>
+            <p>Frontend & Backend</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Siber Güvenlik</h3>
+            <p>Öğrenme Sürecinde</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Sistem Programlama</h3>
+            <p>C & C++</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+/* ── Renk Değişkenleri ── */
+:root {
+  --clr-accent: #2563eb;
+  --clr-accent-light: #7c3aed;
+  --clr-text: #1e293b;
+  --clr-muted: #64748b;
+  --clr-border: #e2e8f0;
+  --clr-tag-bg: #eff6ff;
+  --clr-tag-text: #1d4ed8;
+  --clr-card-bg: #f8fafc;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 64px;
+  --spacing-2xl: 80px;
+}
+
+/* ── Bölüm ── */
+.about-section {
+  padding: var(--spacing-2xl) 0;
+  background: linear-gradient(to bottom, #616161, #2c2c2c);
+}
+
+/* ── Başlık Alanı ── */
+.about-hero {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-tag {
+  display: inline-block;
+  background: var(--clr-tag-bg);
+  color: var(--clr-tag-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin-bottom: var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.about-tag:hover {
+  background: var(--clr-accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.about-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-muted);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ── İçerik Düzeni ── */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+/* ── Metin Bölümü ── */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.about-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--clr-text);
+  line-height: 1.3;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-description {
+  font-size: 16px;
+  color: var(--clr-muted);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-description strong {
+  color: var(--clr-text);
+  font-weight: 600;
+}
+
+/* ── Profil Fotoğrafı ── */
+.about-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-frame {
+  position: relative;
+  padding: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-light));
+  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+.profile-frame img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 6px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ── İstatistikler ── */
+.about-stats {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.stat-card {
+  padding: var(--spacing-md);
+  background: var(--clr-card-bg);
+  border: 2px solid var(--clr-border);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--clr-accent);
+  background: #f0f9ff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin: 0 0 8px 0;
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: var(--clr-muted);
+  margin: 0;
+}
+
+/* ── Responsive Design ── */
+@media (max-width: 1024px) {
+  .about-content {
+    gap: var(--spacing-md);
+  }
+
+  .about-heading {
+    font-size: 28px;
+  }
+
+  .profile-frame img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .about-hero {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    order: 2;
+    text-align: left;
+  }
+
+  .about-profile {
+    order: 1;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .about-heading {
+    font-size: 24px;
+  }
+
+  .about-description {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .profile-frame img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    margin-top: var(--spacing-md);
+  }
+
+  .stat-card {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .about-heading {
+    font-size: 20px;
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+  }
+
+  .profile-frame img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .stat-card h3 {
+    font-size: 16px;
+  }
+
+  .stat-card p {
+    font-size: 13px;
+  }
+}
+</style>
