@@ -1,60 +1,40 @@
+<script setup>
+import { ref } from 'vue'
+
+// Bileşen içindeki dinamik veriler
+const name = ref('Berat Arif G.')
+const description = ref('Merhaba! Ben Berat Arif G., tutkulu bir frontend geliştiricisiyim. Web teknolojilerine olan ilgim ve sürekli öğrenme isteğimle, kullanıcı dostu ve etkileyici web deneyimleri yaratmayı hedefliyorum. HTML, CSS, JavaScript gibi temel web teknolojilerinde güçlü bir altyapıya sahibim ve Vue.js gibi modern frameworklerle projeler geliştiriyorum. Yaratıcı çözümler bulmak ve her projede kendimi geliştirmek benim için çok önemli. İletişime geçmekten çekinmeyin, birlikte harika şeyler yapabiliriz!')
+
+// Yetenek listesi (Buraya kolayca yeni yetenekler ekleyebilirsiniz)
+const abilities = ref([
+  'HTML, CSS, JavaScript',
+  'Vue.js, Next.js, Bootstrap',
+  'Git, GitHub',
+  'Responsive Design',
+  'Problem Solving'
+])
+</script>
+
 <template>
-  <section id="about" class="about-section">
-    <div class="about-hero">
-      <span class="about-tag">Hakkımda</span>
-
-      <p class="about-subtitle">
-        Yazılım geliştirme, web teknolojileri ve sistem programlama alanlarında
-        kendini geliştiren bir yazılım öğrencisi.
-      </p>
-    </div>
-
+  <section class="about-section">
     <div class="container">
       <div class="about-content">
+        <div class="about-image">
+          <img src="../assets/profile.webp" alt="Berat Arif G. - Profil Resmi" loading="lazy">
+        </div>
+
         <div class="about-text">
-          <h2 class="about-heading">
-            Yazılım geliştirmeye tutkuyla bağlı, sürekli öğrenen ve üreten bir geliştiriciyim.
-          </h2>
+          <h1>Hakkımda</h1>
+          <h3>Ben <strong>{{ name }}</strong></h3>
+          <p>{{ description }}</p>
 
-          <p class="about-description">
-            Merhaba, ben <strong>Berat Arif Gönül</strong>. Yazılım dünyasına küçük yaşlarda
-            adım attım ve zamanla bu ilgimi bir tutkuya dönüştürdüm. Özellikle web geliştirme,
-            sistem programlama ve siber güvenlik alanlarında kendimi geliştirmeye devam ediyorum.
-          </p>
-
-          <p class="about-description">
-            PHP, JavaScript, C ve C++ teknolojileriyle projeler geliştiriyor; modern ve kullanıcı
-            dostu web uygulamaları oluşturmaktan keyif alıyorum. Boş zamanlarımda yeni teknolojileri
-            araştırıyor, farklı projeler üzerinde çalışıyor ve yazılım becerilerimi bir üst seviyeye
-            taşımaya odaklanıyorum.
-          </p>
-
-          <p class="about-description">
-            Hedefim; güçlü, güvenli ve ölçeklenebilir yazılımlar geliştirerek sektörde kendime sağlam
-            bir yer edinmek ve gelecekte büyük projelerde görev alabilmek.
-          </p>
-        </div>
-
-        <div class="about-profile">
-          <div class="profile-frame">
-            <img src="../assets/IMG_20260529_202913_288.webp" alt="Profil fotoğrafı" />
-          </div>
-        </div>
-
-        <div class="about-stats">
-          <div class="stat-card">
-            <h3>Web Geliştirme</h3>
-            <p>Frontend & Backend</p>
-          </div>
-
-          <div class="stat-card">
-            <h3>Siber Güvenlik</h3>
-            <p>Öğrenme Sürecinde</p>
-          </div>
-
-          <div class="stat-card">
-            <h3>Sistem Programlama</h3>
-            <p>C & C++</p>
+          <div class="about-abilities">
+            <h2>Yetenekler</h2>
+            <ul class="abilities-list">
+              <li v-for="(ability, index) in abilities" :key="index">
+                {{ ability }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -62,279 +42,97 @@
   </section>
 </template>
 
-<style scoped>
-/* ── Renk Değişkenleri ── */
-:root {
-  --clr-accent: #2563eb;
-  --clr-accent-light: #7c3aed;
-  --clr-text: #1e293b;
-  --clr-muted: #64748b;
-  --clr-border: #e2e8f0;
-  --clr-tag-bg: #eff6ff;
-  --clr-tag-text: #1d4ed8;
-  --clr-card-bg: #f8fafc;
-  --spacing-xs: 8px;
-  --spacing-sm: 16px;
-  --spacing-md: 24px;
-  --spacing-lg: 40px;
-  --spacing-xl: 64px;
-  --spacing-2xl: 80px;
-}
-
-/* ── Bölüm ── */
+<style>
 .about-section {
-  padding: var(--spacing-2xl) 0;
-  background: linear-gradient(to bottom, #616161, #2c2c2c);
+  padding: 60px 0;
+  background-color: #181818;
 }
 
-/* ── Başlık Alanı ── */
-.about-hero {
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
-}
-
-.about-tag {
-  display: inline-block;
-  background: var(--clr-tag-bg);
-  color: var(--clr-tag-text);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 8px 18px;
-  border-radius: 50px;
-  margin-bottom: var(--spacing-md);
-  transition: all 0.3s ease;
-}
-
-.about-tag:hover {
-  background: var(--clr-accent);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.about-subtitle {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--clr-muted);
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* ── Container ── */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 20px;
 }
 
-/* ── İçerik Düzeni ── */
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: var(--spacing-lg);
-}
-
-/* ── Metin Bölümü ── */
-.about-text {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-
-.about-heading {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--clr-text);
-  line-height: 1.3;
-  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.about-description {
-  font-size: 16px;
-  color: var(--clr-muted);
-  line-height: 1.8;
-  text-align: justify;
-}
-
-.about-description strong {
-  color: var(--clr-text);
-  font-weight: 600;
-}
-
-/* ── Profil Fotoğrafı ── */
-.about-profile {
-  display: flex;
-  justify-content: center;
+  gap: 40px;
   align-items: center;
+  flex-wrap: wrap;
+  /* Mobil cihazlarda alt alta gelmesi için */
 }
 
-.profile-frame {
-  position: relative;
-  padding: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-light));
-  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.2);
-  animation: float 3s ease-in-out infinite;
-}
-
-.profile-frame img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  border: 6px solid #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* ── İstatistikler ── */
-.about-stats {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
-}
-
-.stat-card {
-  padding: var(--spacing-md);
-  background: var(--clr-card-bg);
-  border: 2px solid var(--clr-border);
-  border-radius: 12px;
+.about-image {
+  flex: 1;
+  min-width: 280px;
   text-align: center;
-  transition: all 0.3s ease;
 }
 
-.stat-card:hover {
-  border-color: var(--clr-accent);
-  background: #f0f9ff;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  /* Yuvarlak profil resmi için */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.stat-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--clr-text);
-  margin: 0 0 8px 0;
+.about-text {
+  flex: 2;
+  min-width: 300px;
 }
 
-.stat-card p {
-  font-size: 14px;
-  color: var(--clr-muted);
-  margin: 0;
+.about-text h1 {
+  font-size: 2.5rem;
+  color: #2c502d;
+  margin-bottom: 10px;
 }
 
-/* ── Responsive Design ── */
-@media (max-width: 1024px) {
-  .about-content {
-    gap: var(--spacing-md);
-  }
-
-  .about-heading {
-    font-size: 28px;
-  }
-
-  .profile-frame img {
-    width: 280px;
-    height: 280px;
-  }
+.about-text h3 {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
 }
 
+.about-text p {
+  line-height: 1.6;
+  color: #858585;
+  margin-bottom: 25px;
+}
+
+.about-abilities h2 {
+  font-size: 1.8rem;
+  color: #2bff8b;
+  margin-bottom: 15px;
+}
+
+.abilities-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.abilities-list li {
+  background: #000000;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #42b983;
+  /* Vue yeşili şık bir detay */
+  font-weight: 500;
+  color: #cdd6df;
+}
+
+/* Mobil Ekranlar İçin Ufak Ayar */
 @media (max-width: 768px) {
-  .about-section {
-    padding: var(--spacing-xl) 0;
-  }
-
-  .about-hero {
-    margin-bottom: var(--spacing-lg);
-  }
-
   .about-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .about-text {
-    order: 2;
+  .abilities-list {
     text-align: left;
-  }
-
-  .about-profile {
-    order: 1;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .about-heading {
-    font-size: 24px;
-  }
-
-  .about-description {
-    font-size: 15px;
-    text-align: left;
-  }
-
-  .profile-frame img {
-    width: 240px;
-    height: 240px;
-  }
-
-  .about-stats {
-    grid-template-columns: 1fr;
-    margin-top: var(--spacing-md);
-  }
-
-  .stat-card {
-    padding: var(--spacing-md);
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    padding: var(--spacing-lg) 0;
-  }
-
-  .container {
-    padding: 0 var(--spacing-sm);
-  }
-
-  .about-heading {
-    font-size: 20px;
-  }
-
-  .about-description {
-    font-size: 14px;
-  }
-
-  .about-subtitle {
-    font-size: 16px;
-  }
-
-  .profile-frame img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .stat-card h3 {
-    font-size: 16px;
-  }
-
-  .stat-card p {
-    font-size: 13px;
   }
 }
 </style>

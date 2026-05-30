@@ -1,6 +1,5 @@
 <script setup>
 import Links from './Link/Links.vue';
-import Profile from '../assets/IMG_20260529_202913_288.webp';
 </script>
 
 <template>

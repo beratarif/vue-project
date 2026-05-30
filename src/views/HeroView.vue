@@ -1,24 +1,20 @@
-<script setup>
-
-</script>
-
 <template>
-  <section class="hero-section">
-    <div class="container">
+  <section id="hero" class="container">
+    <div class="hero-section">
       <div class="hero-content">
-        <div class="hero-profile">
-          <img src="../assets/IMG_20260529_202913_288.webp" alt="">
+        <div class="hero-links">
+          <h1>Merhaba, Ben <span class="green">Berat Arif G</span></h1>
+          <h3>Frontend Developer</h3>
         </div>
-        <div class="hero-text">
-          <h1 class="green">Berat Arif G.</h1>
-          <h3>Front-End Developer</h3>
+        <div class="hero-profile">
+          <img src="../assets/profile.webp" alt="Profile Picture">
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<style scoped>
+<style>
 .container {
   max-width: 1920px;
   width: 100%;
@@ -41,30 +37,21 @@
   align-items: center;
   width: 100%;
 }
-
 .hero-links {
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 h1 {
   font-size: 50px;
   font-weight: 800;
 }
-
 h3 {
   font-size: 30px;
   font-weight: 500;
   color: grey;
 }
-
-.green{
-  color: #0fd167;
-  font-weight: 800;
-
-}
-
 .hero-profile img{
   width:500px;
   height: 500px;
@@ -72,4 +59,13 @@ h3 {
   align-items: center;
   text-align: center;
 }
+
+.green{
+  transition: color 0.5s ease;
+}
+
+.green:hover{
+  color: #0fd167;
+}
+
 </style>

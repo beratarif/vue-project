@@ -1,13 +1,19 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
 import Navbar from './components/Navbar.vue';
-import HelloWorld from './components/HelloWorld.vue';
+import HeroView from './views/HeroView.vue';
+import AboutView from './views/AboutView.vue';
+import ContactView from './views/ContactView.vue';
+import FooterView from './views/FooterView.vue';
+import ProjectView from './views/ProjectView.vue';
 </script>
 
 <template>
-  <Navbar/>
-  <HelloWorld/>
-  <RouterView />
+  <Navbar />
+  <HeroView />
+  <AboutView />
+  <ProjectView />
+  <ContactView />
+  <FooterView />
 </template>
 
 <style scoped>
@@ -21,5 +27,4 @@ header {
   margin: 0 auto 2rem;
   border-radius: 50%;
 }
-
 </style>
