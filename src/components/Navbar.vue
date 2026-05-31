@@ -1,5 +1,10 @@
 <script setup>
+
+// Give the component a multi-word name to satisfy linting rules
+defineOptions({ name: 'AppNavbar' })
+
 import Links from './Link/Links.vue';
+
 </script>
 
 <template>
@@ -31,5 +36,4 @@ import Links from './Link/Links.vue';
   font-weight: bold;
   color: #0fd167;
 }
-
 </style>
