@@ -83,7 +83,7 @@ const abilities = ref([
 
 .about-text h1 {
   font-size: 2.5rem;
-  color: #2c502d;
+  color: #07fb0f;
   margin-bottom: 10px;
 }
 

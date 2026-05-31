@@ -4,7 +4,7 @@
       <div class="hero-content">
         <div class="hero-links">
           <h1>Merhaba, Ben <span class="green">Berat Arif G</span></h1>
-          <h3>Frontend Developer</h3>
+          <h3>Frontend <span class="green">Developer</span></h3>
         </div>
         <div class="hero-profile">
           <img src="../assets/profile.webp" alt="Profile Picture">
@@ -14,7 +14,7 @@
   </section>
 </template>
 
-<style>
+<style scoped>
 .container {
   max-width: 1920px;
   width: 100%;
@@ -61,11 +61,25 @@ h3 {
 }
 
 .green{
-  transition: color 0.5s ease;
+  animation: fadeIn 1s ease-in-out;
+  font-size: 50px;
+  font-weight: 800;
+  color: #0fd167;
 }
 
 .green:hover{
   color: #0fd167;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 </style>
