@@ -4,7 +4,7 @@
       <div class="hero-content">
         <div class="hero-links">
           <h1>Merhaba, Ben <span class="green">Berat Arif G</span></h1>
-          <h3>Frontend <span class="green">Developer</span></h3>
+          <h3>Frontend Developer</h3>
         </div>
         <div class="hero-profile">
           <img src="../assets/profile.webp" alt="Profile Picture">
