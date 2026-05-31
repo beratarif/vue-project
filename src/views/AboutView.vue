@@ -16,7 +16,7 @@ const abilities = ref([
 </script>
 
 <template>
-  <section class="about-section">
+  <section id="about" class="about-section">
     <div class="container">
       <div class="about-content">
         <div class="about-image">

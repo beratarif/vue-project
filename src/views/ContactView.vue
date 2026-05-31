@@ -1,24 +1,24 @@
 <script setup>
-
+import 'primeicons/primeicons.css';
 </script>
 
 <template>
-  <section class="contact-section">
+  <section id="contact" class="contact-section">
     <div class="container">
       <h1>İletişim</h1>
-      <p>Berat Arif G. ile iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+      <p>Berat Arif G. ile iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p> <br>
       <ul class="contact-info">
-        <li><strong>Email:</strong>
+        <li><i class="pi pi-envelope"> :</i>
           <a href="mailto:gonulberat1@gmail.com"> gonulberat1@gmail.com</a>
         </li>
-        <li><strong>Telefon:</strong>
+        <li><i class="pi pi-phone"> :</i>
           <a href="tel:+905451724552"> +90 545 172 45 52</a>
         </li>
-        <li><strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/in/beratarifg/" target="_blank"> linkedin.com/in/beratarifg</a>
+        <li><i class="pi pi-github"> :</i>
+          <a href="https://github.com/beratarif" target="_blank"> GitHub profilim.</a>
         </li>
-        <li><strong>GitHub:</strong>
-          <a href="https://github.com/beratarif" target="_blank"> github.com/beratarif</a>
+        <li><i class="pi pi-instagram"> :</i>
+          <a href="https://www.instagram.com/berat.arif.g/" target="_blank"> Instagram adresim.</a>
         </li>
       </ul>
     </div>

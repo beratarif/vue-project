@@ -37,7 +37,7 @@ import { ref } from 'vue';
 </script>
 
 <template>
-  <section class="project-section">
+  <section id="projects" class="project-section">
     <div class="container">
       <h1>Projeler</h1>
       <p>Aşağıda yer alan projelerimi inceleyebilirsiniz:</p>
@@ -66,7 +66,7 @@ import { ref } from 'vue';
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
-  
+
 }
 .project-item {
   background-color: #303030;
