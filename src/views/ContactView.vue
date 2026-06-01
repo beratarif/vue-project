@@ -29,26 +29,30 @@ import 'primeicons/primeicons.css';
 .contact-section {
   padding: 60px 0;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .contact-info {
   list-style: none;
   padding: 0;
 }
+
 .contact-info li {
   margin-bottom: 15px;
   font-size: 18px;
 }
+
 .contact-info a {
   color: #0fd167;
   text-decoration: none;
   transition: color 0.2s ease;
 }
+
 .contact-info a:hover {
   color: #0b9c4a;
 }
-
 </style>
