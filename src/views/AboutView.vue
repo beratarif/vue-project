@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 
 // Bileşen içindeki dinamik veriler
-const name = ref('Berat Arif G.')
 const description = ref('Merhaba! Ben Berat Arif G., tutkulu bir frontend geliştiricisiyim. Web teknolojilerine olan ilgim ve sürekli öğrenme isteğimle, kullanıcı dostu ve etkileyici web deneyimleri yaratmayı hedefliyorum. HTML, CSS, JavaScript gibi temel web teknolojilerinde güçlü bir altyapıya sahibim ve Vue.js gibi modern frameworklerle projeler geliştiriyorum. Yaratıcı çözümler bulmak ve her projede kendimi geliştirmek benim için çok önemli. İletişime geçmekten çekinmeyin, birlikte harika şeyler yapabiliriz!')
 
 // Yetenek listesi (Buraya kolayca yeni yetenekler ekleyebilirsiniz)
@@ -11,7 +10,8 @@ const abilities = ref([
   'Vue.js, Next.js, Bootstrap',
   'Git, GitHub',
   'Responsive Design',
-  'Problem Solving'
+  'Problem Solving',
+  'Resend, Next.js API'
 ])
 </script>
 
@@ -25,7 +25,6 @@ const abilities = ref([
 
         <div class="about-text">
           <h1>Hakkımda</h1>
-          <h3>Ben <strong>{{ name }}</strong></h3>
           <p>{{ description }}</p>
 
           <div class="about-abilities">

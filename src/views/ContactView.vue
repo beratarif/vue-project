@@ -9,10 +9,10 @@ import 'primeicons/primeicons.css';
       <p>Berat Arif G. ile iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p> <br>
       <ul class="contact-info">
         <li><i class="pi pi-envelope"> :</i>
-          <a href="mailto:gonulberat1@gmail.com"> gonulberat1@gmail.com</a>
+          <a href="mailto:gonulberat1@gmail.com" target="_blank"> gonulberat1@gmail.com</a>
         </li>
         <li><i class="pi pi-phone"> :</i>
-          <a href="tel:+905451724552"> +90 545 172 45 52</a>
+          <a href="tel:+905451724552" target="_blank"> Telefon Numaram</a>
         </li>
         <li><i class="pi pi-github"> :</i>
           <a href="https://github.com/beratarif" target="_blank"> GitHub profilim.</a>

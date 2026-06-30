@@ -3,11 +3,7 @@
     <div class="hero-section">
       <div class="hero-content">
         <div class="hero-links">
-          <h1>Merhaba, Ben <span class="green">Berat Arif G</span></h1>
-          <h3>Frontend Developer</h3>
-        </div>
-        <div class="hero-profile">
-          <img src="../assets/profile.webp" alt="Profile Picture">
+          <h1>Sayfama Hoş Geldiniz. Bilgi Almak İçin Lütfen <br> <span class="green"><a class="about-link" href="#about">Devam Edin</a></span></h1>
         </div>
       </div>
     </div>
@@ -69,6 +65,12 @@ h3 {
 
 .green:hover{
   color: #0fd167;
+}
+
+.about-link {
+  text-decoration: none;
+  color: #0fd167;
+  transition: color 0.3s ease;
 }
 
 @keyframes fadeIn {

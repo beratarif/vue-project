@@ -5,7 +5,7 @@
 <template>
   <section class="footer-section">
     <div class="container">
-      <p class="green">© 2024 Berat Arif G. Tüm hakları saklıdır.</p>
+      <p class="green">© 2026 Berat Arif G. Tüm hakları saklıdır.</p>
     </div>
   </section>
 </template>
